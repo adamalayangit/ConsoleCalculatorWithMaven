@@ -9,7 +9,7 @@ public class Calculator {
 	
 	public int differenz(int summand1, int summand2)
 	{
-		return summand1 - summand2;
+		return 0;
 	}
 
 }
