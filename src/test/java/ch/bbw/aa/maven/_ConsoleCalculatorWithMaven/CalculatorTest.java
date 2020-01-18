@@ -20,6 +20,12 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testNegativeSummeZweiNegativeIsOk() {
+		testee = new Calculator();
+		assertTrue(testee.summe(-5, -10) == -15);
+	}
+	
+	@Test
 	public void testSummeZweiPositiveIsNotOk() {
 		testee = new Calculator();
 		assertTrue(testee.differenz(35, 25) == 10);
