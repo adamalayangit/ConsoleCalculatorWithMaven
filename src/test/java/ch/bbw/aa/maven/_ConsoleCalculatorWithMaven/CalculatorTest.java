@@ -2,6 +2,7 @@ package ch.bbw.aa.maven._ConsoleCalculatorWithMaven;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -11,24 +12,26 @@ import org.junit.Test;
  */
 
 public class CalculatorTest {
-	Calculator testee;
+	private Calculator calculator;
+	
+	@Before
+	public void setup() {
+		calculator = new Calculator();
+	}
 
 	@Test
 	public void testSummeZweiPositiveIsOk() {
-		testee = new Calculator();
-		assertTrue(testee.summe(10, 25) == 35);
+		assertTrue(calculator.summe(10, 25) == 35);
 	}
 	
 	@Test
 	public void testNegativeSummeZweiNegativeIsOk() {
-		testee = new Calculator();
-		assertTrue(testee.summe(-5, -10) == -15);
+		assertTrue(calculator.summe(-5, -10) == -15);
 	}
 	
 	@Test
 	public void testSummeZweiPositiveIsNotOk() {
-		testee = new Calculator();
-		assertTrue(testee.differenz(35, 25) == 10);
+		assertTrue(calculator.differenz(35, 25) == 10);
 	}
 
 }
