@@ -34,14 +34,14 @@ public class CalculatorTest {
 		assertTrue(calculator.differenz(35, 25) == 10);
 	}
 	
-	@Test(expected=IndexOutOfBoundsException.class)
-	public void testDivisionMitNullIsOk() {
-		assertTrue(calculator.division(100, 0) == 100);
+	@Test
+	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
+		assertTrue(calculator.division(4, -2) == -2);
 	}
 	
-	@Test(expected=IndexOutOfBoundsException.class)
+	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDivisionNullMitNegativeIsNotOk() {
-		assertTrue(calculator.division(-100, 0) == 100);
+		assertTrue(calculator.division(-4, 0) == 0);
 	}
 
 }
