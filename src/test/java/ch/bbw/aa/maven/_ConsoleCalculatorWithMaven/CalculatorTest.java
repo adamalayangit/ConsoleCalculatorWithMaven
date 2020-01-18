@@ -30,8 +30,13 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSummeZweiPositiveIsNotOk() {
+	public void testDifferenzZweiPositiveIsNotOk() {
 		assertTrue(calculator.differenz(35, 25) == 10);
+	}
+	
+	@Test
+	public void testDivisionZweiPositiveIsOk() {
+		assertTrue(calculator.division(100, 5) == 20);
 	}
 
 }
