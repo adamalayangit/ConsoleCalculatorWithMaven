@@ -30,8 +30,18 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testSummeZweiPositiveIsNotOk() {
+	public void testDifferenzZweiPositiveIsNotOk() {
 		assertTrue(calculator.differenz(35, 25) == 10);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testDivisionMitNullIsOk() {
+		assertTrue(calculator.division(100, 0) == 100);
+	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testDivisionNullMitNegativeIsNotOk() {
+		assertTrue(calculator.division(-100, 0) == 100);
 	}
 
 }
