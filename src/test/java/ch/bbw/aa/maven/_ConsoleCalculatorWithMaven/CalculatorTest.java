@@ -38,5 +38,10 @@ public class CalculatorTest {
 	public void testDivisionMitNullIsOk() {
 		assertTrue(calculator.division(100, 0) == 100);
 	}
+	
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testDivisionNullMitNegativeIsNotOk() {
+		assertTrue(calculator.division(-100, 0) == 100);
+	}
 
 }
