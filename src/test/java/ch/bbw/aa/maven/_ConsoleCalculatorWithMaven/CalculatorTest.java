@@ -34,9 +34,9 @@ public class CalculatorTest {
 		assertTrue(calculator.differenz(35, 25) == 10);
 	}
 	
-	@Test
-	public void testDivisionZweiPositiveIsOk() {
-		assertTrue(calculator.division(100, 5) == 20);
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void testDivisionMitNullIsOk() {
+		assertTrue(calculator.division(100, 0) == 100);
 	}
 
 }
