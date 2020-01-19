@@ -75,6 +75,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testTwoZeroDifferenz() {
+		assertTrue(calculator.differenz(0, 0) == 0);
+	}
+	
+	@Test
 	public void testTwoMinValueDifferenz() {
 		assertTrue(calculator.differenz(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
 	}
