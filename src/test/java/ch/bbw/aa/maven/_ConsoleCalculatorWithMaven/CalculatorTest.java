@@ -50,6 +50,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testOneMinValueOneMaxValue() {
+		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MAX_VALUE) == -1);
+	}
+	
+	@Test
 	public void testDifferenzZweiPositiveIsNotOk() {
 		assertTrue(calculator.differenz(35, 25) == 10);
 	}
