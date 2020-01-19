@@ -35,27 +35,27 @@ public class CalculatorTest {
 	}
 	
 	@Test
-	public void testTwoZeroIsOk() {
+	public void testTwoZeroSummeIsOk() {
 		assertTrue(calculator.summe(0, 0) == 0);
 	}
 	
 	@Test
-	public void testTwoMaxValue() {
+	public void testTwoMaxValueSumme() {
 		assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
 	}
 	
 	@Test
-	public void testTwoMinValue() {
+	public void testTwoMinValueSumme() {
 		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
 	}
 	
 	@Test
-	public void testOneMinValueOneMaxValue() {
+	public void testOneMinValueOneMaxValueSumme() {
 		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MAX_VALUE) == -1);
 	}
 	
 	@Test
-	public void testOneMaxValueAndOne() {
+	public void testOneMaxValueAndOneSumme() {
 		assertTrue(calculator.summe(Integer.MAX_VALUE, 1) == -2147483648);
 	}
 	
