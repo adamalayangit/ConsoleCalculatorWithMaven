@@ -119,8 +119,14 @@ public class CalculatorTest {
 		assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
 	}
 	
+	@Test
 	public void testDivisionZweiMaxValue() {
 		assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
+	
+	@Test
+	public void testDivisionMaxValueAndOne() {
+		assertTrue(calculator.division(Integer.MAX_VALUE, 1) == 2.147483647E9);
 	}
 	
 	@Test
