@@ -115,6 +115,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testDivisionZweiMinValue() {
+		assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
+	}
+	
+	@Test
 	public void testDivisionMitNull() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, 0) == 0);
 	}
