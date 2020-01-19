@@ -70,6 +70,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testDifferenzOneNegativeOnePositiveIsOk() {
+		assertTrue(calculator.differenz(35, -25) == 60);
+	}
+	
+	@Test
 	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
