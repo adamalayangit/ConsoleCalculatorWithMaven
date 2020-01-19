@@ -65,6 +65,41 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testDifferenzZweiNegativeIsOk() {
+		assertTrue(calculator.differenz(-35, -25) == -10);
+	}
+	
+	@Test
+	public void testDifferenzOneNegativeOnePositiveIsOk() {
+		assertTrue(calculator.differenz(35, -25) == 60);
+	}
+	
+	@Test
+	public void testTwoZeroDifferenz() {
+		assertTrue(calculator.differenz(0, 0) == 0);
+	}
+	
+	@Test
+	public void testTwoMinValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	
+	@Test
+	public void testTwoMaxValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
+	}
+	
+	@Test
+	public void testOneMinValueOneMaxValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+	}
+	
+	 @Test
+	 public void testOneMaxValueAndOneDifferenz() {
+	    assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
+	 }
+	
+	@Test
 	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
