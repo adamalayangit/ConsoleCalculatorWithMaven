@@ -80,6 +80,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testTwoMaxValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MAX_VALUE) == 0);
+	}
+	
+	@Test
 	public void testOneMinValueOneMaxValueDifferenz() {
 		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
