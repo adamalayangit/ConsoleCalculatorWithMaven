@@ -94,19 +94,49 @@ public class CalculatorTest {
 		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
 	
-	 @Test
-	 public void testOneMaxValueAndOneDifferenz() {
-	    assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
-	 }
+	@Test
+	public void testOneMaxValueAndOneDifferenz() {
+	   assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
+	}
+	 
+	@Test
+	public void testDivisionZweiPositive() {
+		assertTrue(calculator.division(5, 1) == 5);
+	}
 	
 	@Test
-	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
+	public void testDivisionZweiNegative() {
+		assertTrue(calculator.division(-5, -5) == 1);
+	}
+	
+	@Test
+	public void testDivisionOnePositiveOneNegative() {
 		assertTrue(calculator.division(4, -2) == -2);
+	}
+	
+	@Test
+	public void testDivisionZweiMinValue() {
+		assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
+	}
+	
+	@Test
+	public void testDivisionZweiMaxValue() {
+		assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
+	
+	@Test
+	public void testDivisionMaxValueAndOne() {
+		assertTrue(calculator.division(Integer.MAX_VALUE, 1) == 2.147483647E9);
+	}
+	
+	/*@Test
+	public void testDivisionMitNull() throws java.lang.ArithmeticException{
+		assertTrue(calculator.division(4, 0) == 0);
 	}
 	
 	@Test(expected=java.lang.ArithmeticException.class)
 	public void testDivisionNullMitNegativeIsNotOk() {
 		assertTrue(calculator.division(-4, 0) == 0);
-	}
+	}*/
 
 }
