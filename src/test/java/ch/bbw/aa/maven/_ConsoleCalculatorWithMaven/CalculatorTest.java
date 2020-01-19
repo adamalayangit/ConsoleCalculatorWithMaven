@@ -30,6 +30,36 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testOnePositiveOneNegativeSummeIsOk() {
+		assertTrue(calculator.summe(-6, 10) == 4);
+	}
+	
+	@Test
+	public void testTwoZeroIsOk() {
+		assertTrue(calculator.summe(0, 0) == 0);
+	}
+	
+	@Test
+	public void testTwoMaxValue() {
+		assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
+	}
+	
+	@Test
+	public void testTwoMinValue() {
+		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	
+	@Test
+	public void testOneMinValueOneMaxValue() {
+		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MAX_VALUE) == -1);
+	}
+	
+	@Test
+	public void testOneMaxValueAndOne() {
+		assertTrue(calculator.summe(Integer.MAX_VALUE, 1) == -2147483648);
+	}
+	
+	@Test
 	public void testDifferenzZweiPositiveIsNotOk() {
 		assertTrue(calculator.differenz(35, 25) == 10);
 	}
