@@ -75,6 +75,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testTwoMinValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MIN_VALUE, Integer.MIN_VALUE) == 0);
+	}
+	
+	@Test
 	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
