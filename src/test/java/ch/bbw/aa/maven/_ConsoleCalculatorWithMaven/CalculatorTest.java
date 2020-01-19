@@ -40,6 +40,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testTwoMaxValue() {
+		assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -4);
+	}
+	
+	@Test
 	public void testDifferenzZweiPositiveIsNotOk() {
 		assertTrue(calculator.differenz(35, 25) == 10);
 	}
