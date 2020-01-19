@@ -80,6 +80,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testOneMinValueOneMaxValueDifferenz() {
+		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
+	}
+	
+	@Test
 	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
