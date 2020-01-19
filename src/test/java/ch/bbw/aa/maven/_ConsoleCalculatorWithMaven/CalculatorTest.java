@@ -100,7 +100,7 @@ public class CalculatorTest {
 	 }
 	
 	@Test
-	public void testDivisionMitNullIsOk() throws java.lang.ArithmeticException{
+	public void testDivisionOnePositiveOneNegative() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
 	
