@@ -119,6 +119,10 @@ public class CalculatorTest {
 		assertTrue(calculator.division(Integer.MIN_VALUE, Integer.MIN_VALUE) == 1);
 	}
 	
+	public void testDivisionZweiMaxValue() {
+		assertTrue(calculator.division(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}
+	
 	@Test
 	public void testDivisionMitNull() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, 0) == 0);
