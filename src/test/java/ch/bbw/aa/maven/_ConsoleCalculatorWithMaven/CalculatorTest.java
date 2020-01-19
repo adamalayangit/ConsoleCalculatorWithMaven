@@ -41,7 +41,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void testTwoMaxValue() {
-		assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -4);
+		assertTrue(calculator.summe(Integer.MAX_VALUE, Integer.MAX_VALUE) == -2);
 	}
 	
 	@Test
@@ -52,6 +52,11 @@ public class CalculatorTest {
 	@Test
 	public void testOneMinValueOneMaxValue() {
 		assertTrue(calculator.summe(Integer.MIN_VALUE, Integer.MAX_VALUE) == -1);
+	}
+	
+	@Test
+	public void testOneMaxValueAndOne() {
+		assertTrue(calculator.summe(Integer.MAX_VALUE, 1) == -2147483648);
 	}
 	
 	@Test
