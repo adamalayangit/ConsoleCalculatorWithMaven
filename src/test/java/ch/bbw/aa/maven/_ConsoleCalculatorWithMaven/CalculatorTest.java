@@ -138,5 +138,10 @@ public class CalculatorTest {
 	public void testDivisionNullMitNegativeIsNotOk() {
 		assertTrue(calculator.division(-4, 0) == 0);
 	}*/
+	
+	@Test
+	public void testZinsesZins() {
+		assertTrue(calculator.zinsesZins(1200, 4, 5).equals("1459.98"));
+	}
 
 }

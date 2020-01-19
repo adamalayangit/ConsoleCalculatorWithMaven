@@ -21,5 +21,6 @@ public class App
         System.out.println( "Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
         System.out.println( "Differenz " + valueA + " - " + valueB + " = " + calculator.differenz(valueA, valueB));
         System.out.println( "Division " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
+        System.out.println( "Zinseszins " + valueA + " / " + valueB + " = " + calculator.zinsesZins(1200, 4, 5));
     }
 }
