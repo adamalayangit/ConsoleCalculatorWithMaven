@@ -105,6 +105,11 @@ public class CalculatorTest {
 	}
 	
 	@Test
+	public void testDivisionZweiNegative() {
+		assertTrue(calculator.division(-50, -5) == 10);
+	}
+	
+	@Test
 	public void testDivisionOnePositiveOneNegative() throws java.lang.ArithmeticException{
 		assertTrue(calculator.division(4, -2) == -2);
 	}
