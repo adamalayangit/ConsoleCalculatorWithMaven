@@ -94,10 +94,15 @@ public class CalculatorTest {
 		assertTrue(calculator.differenz(Integer.MAX_VALUE, Integer.MIN_VALUE) == -1);
 	}
 	
-	 @Test
-	 public void testOneMaxValueAndOneDifferenz() {
-	    assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
-	 }
+	@Test
+	public void testOneMaxValueAndOneDifferenz() {
+	   assertTrue(calculator.differenz(Integer.MAX_VALUE, 1) == 2147483646);
+	}
+	 
+	@Test
+	public void testDivisionZweiPositive() {
+		assertTrue(calculator.division(50, 5) == 10);
+	}
 	
 	@Test
 	public void testDivisionOnePositiveOneNegative() throws java.lang.ArithmeticException{
