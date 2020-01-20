@@ -11,6 +11,10 @@ public class App
     	Calculator calculator = new Calculator();
     	int valueA = 0;
     	int valueB = 0;
+    	double anfangKapital = 0.0;
+    	double zins = 0.0;
+    	double laufZeit = 0.0;
+    	
     	
     	System.out.println( "Console Calculator" );
     	System.out.println( "==================" );
@@ -21,6 +25,9 @@ public class App
         System.out.println( "Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
         System.out.println( "Differenz " + valueA + " - " + valueB + " = " + calculator.differenz(valueA, valueB));
         System.out.println( "Division " + valueA + " / " + valueB + " = " + calculator.division(valueA, valueB));
-        System.out.println( "Zinseszins " + valueA + " / " + valueB + " = " + calculator.zinsesZins(1200, 4, 5));
+        System.out.println( "Anfangskapital " + ": " + anfangKapital + ", "
+        					+ "Zins: " + zins + ", "
+        					+ "Laufzeit in Jahren: " + laufZeit + " = " 
+        					+ "Zinseszins" + calculator.zinsesZins(1200, 4, 5));
     }
 }
