@@ -1,3 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+deploy:
+  provider: releases
+  api_key:
+    secure: rw4upBYwTqWYBlHIZcKffEjiAmezGqpq03mBplt4nImFTWxHGR5ksbuhS3LwKLIfLxT+zcHzAODLi63uEJS0BJP0NVtW63R/ZYiuncXINLalMfVUTvRQjmzzXqznZddwAtijLHCKYc2vJKSplh9SraQdhrx7cUVuHvkvu1qbYE4JgI7tMw13HbDfQ6jvO4BOxH6Lc0RggZbi4riz8wobb7QbewrFiVnOOgtcpK1uLYwModgzmcrmyQVm9YmGzgiHumOc6VguUzTCVzYvZFxuZgprS7MCBLA4eqb1w5LiiBrDVByUbzOUXK5CmC1s6Ae++bjiTi2uMVRvqruYvQHAP11Ake+Ks4nSnmhBEbj+zKMpIdDaJb0Pm14fouUsJ8fMwvAKuOvEHQaWYUnSGkaLYylSvVtWekd0HRaTwQwXZcdmWwhNmCtOCcRiaILaFFVneXWpcvWBwJ5zbw3mmEStfc5Xpf96O3mU4zRH7r6Od1GkV1cvI+HM1l52DHkz82nezlhFPeEk8/CqeIxDaseSxQq2TWnqex47GAPmCWrBuN+PX9Mx82hr2bx0dkkMRI9o9m7tw5eqHsGtAPOec9jOg1wxYgT1sacbJRYn9Kt/jToIOgfvZ/VOl/6s5w6TfpqYPJ/XEp8PP6Xp9ecQHokmPPKc18ReAo1yGD+cfc/jcQo=
+  file: "/home/travis/.m2/repository/ch/bbw/aa/maven/02_ConsoleCalculatorWithMaven/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven-0.0.1-SNAPSHOT.jar"
+  on:
+    repo: adamalayangit/ConsoleCalculatorWithMaven
