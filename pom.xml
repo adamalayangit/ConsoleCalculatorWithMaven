@@ -7,6 +7,7 @@
   <groupId>ch.bbw.aa.maven</groupId>
   <artifactId>02_ConsoleCalculatorWithMaven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>02_ConsoleCalculatorWithMaven</name>
   <!-- FIXME change it to the project's website -->
@@ -68,6 +69,20 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.2.0</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib</classpathPrefix>
+                <mainClass>ch.bbw.aa.maven._ConsoleCalculatorWithMaven.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
